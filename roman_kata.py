@@ -32,18 +32,18 @@ print(f"This is: {conversion}")
 num_symbol = input("Write a roman numeral: ")
 
 
-digits = {"I": 1, "IV": 4, "V": 5, "IX": 9, "X": 10,
-          "XL": 40, "L": 50, "XC": 90, "C": 100, "D": 500, "M": 1000}
-answer = 0
+def convert_numbers(num_symbol):
+
+    answer = 0
+
+    for i in range(len(num_symbol)):
+        if i+1 != len(num_symbol) and numerals[num_symbol[i]] < numerals[num_symbol[i+1]]:
+            answer = answer - numerals[num_symbol[i]]
+
+        else:
+            answer = answer + numerals[num_symbol[i]]
+
+    return answer
 
 
-for i in range(len(num_symbol)):
-    if i+1 != len(num_symbol) and digits[num_symbol[i]] < digits[num_symbol[i+1]]:
-        answer = answer - digits[num_symbol[i]]
-
-    else:
-        answer = answer + digits[num_symbol[i]]
-
-
-print(num_symbol)
-print("This is:", answer)
+print("This is:", convert_numbers(num_symbol))
