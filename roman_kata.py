@@ -2,6 +2,8 @@
 Homework: Roman Kata Assignment
 """
 # Part I
+input_number = int(input("Write a numerical number: "))
+
 
 numerals = {"I": 1, "IV": 4, "V": 5, "IX": 9, "X": 10,
             "XL": 40, "L": 50, "XC": 90, "C": 100, "D": 500, "M": 1000}
@@ -22,12 +24,13 @@ def convert_numerals(input_number):
     return range_flag + convert_numerals(remaining)
 
 
-print(convert_numerals(484))
+conversion = convert_numerals(input_number)
+print(f"This is: {conversion}")
 
 
 # Part II
 num_symbol = input("Write a roman numeral: ")
-x = input()
+
 
 digits = {"I": 1, "IV": 4, "V": 5, "IX": 9, "X": 10,
           "XL": 40, "L": 50, "XC": 90, "C": 100, "D": 500, "M": 1000}
