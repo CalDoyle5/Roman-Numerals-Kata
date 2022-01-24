@@ -1,0 +1,18 @@
+"""
+Homework: Roman Kata Assignment
+"""
+
+numerals = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+for k, v in numerals.items():
+    print(k, v)
+
+
+def convert_numerals(input_number):
+    for symbol, integer in numerals.items:
+        if integer == input_number:
+            return symbol
+
+
+print(convert_numerals)
+
+# Roman Numbers
