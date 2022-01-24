@@ -42,5 +42,5 @@ for i in range(len(num_symbol)):
         answer = answer + digits[num_symbol[i]]
 
 
-print(x)
+print(num_symbol)
 print("This is:", answer)
